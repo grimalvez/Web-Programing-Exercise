@@ -1,0 +1,15 @@
+* {
+	margin: 5px;
+	padding: 5px;
+	font-family: 'JetBrains Mono', monospace;
+}
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+table{
+	width:100% ;
+}
+th, td{
+	width:10%
+}

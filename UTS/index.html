@@ -1,0 +1,21 @@
+<?php
+if(!isset($_SESSION)){ 
+				session_start(); 
+			}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>Login</h1>
+	<form method="post" action="process.php">
+		<p>Username</p> <input type="text" name="username">
+		<p>E-mail</p> <input type="text" name="email">
+		<input type="submit" name="submit" value="submit">
+	</form>
+</body>
+</html>
