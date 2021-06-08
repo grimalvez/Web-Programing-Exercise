@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200;1,300;1,400&family=Ubuntu:wght@500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 25px 0;
+    transition: all 0.4s ease;
+}
+
+.navbar.sticky {
+    padding: 10px 0;
+    background: #3d84b8;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #f4f4f4;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fdfaf6;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 22px;
+    transition: color 0.4s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .menu li a:hover {
+    color: #fdfaf6;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #111;
+}
+
+.menu-btn {
+    color: #fdfaf6;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* HOME */
+.home{
+    padding: 160px 0;
+    background: url("img/home.jpg") no-repeat center;
+    
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    text-align: center;
+}
+.home .home-content .text1{
+    color: #fc5404;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+.home .home-content .text2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #fdfaf6;
+}
+
+/* REGISTRASI */
+.regis{
+    padding: 100px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+.regis .title{
+    margin-bottom: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.regis .regis-content{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.regis .regis-content .card{
+    width: calc(50% - 20px);
+    background: #fbf6f0;
+    margin-bottom: 30px;
+    padding: 35px 30px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .75);
+}
+.regis .regis-content .card:hover{
+    box-shadow: 0 0 8px 3px #F79520;
+}
+.regis .regis-content .card .text{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+.regis .regis-content .card h2{
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+}
+.regis .regis-content .card p{
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+.regis .regis-content .card .card-btn{
+    margin-top: 25px;
+}
+.regis .regis-content .card .card-btn a{
+    color: #fff;
+    padding: 10px;
+    background: #3498db;
+    border-radius: 25px;
+    transition: 0.7s;
+}
+.regis .regis-content .card .card-btn a:hover{
+    border-radius: 5px;
+    background: #1f6f8b;
+}
+
+
+
+/* responsive */
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        right: -100%;
+        top: 0;
+        background: #3d84b8;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.4s ease;
+    }
+
+    .navbar .menu.active {
+        right: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+/* About Us */
+.about{
+    padding: 50px 0;
+    background: #3d84b8;
+    text-align: center;
+    color: white;
+    max-width: 100%;
+    overflow: auto;
+    justify-content: space-between;
+    letter-spacing: 1.5px;
+}
+.about .title{
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.about .about-content{
+
+    text-align: justify;
+    flex-wrap: wrap;
+    float: left;
+    width: 50%;
+}
+.about .about-content h2{
+    text-align: center;
+}
+.about .about-content p{
+    margin-top: 5px;
+}
+.about .about-img img{
+    float: left;
+    width: 30%
+    border-radius:50%;
+    margin-left: 10%;
+}
